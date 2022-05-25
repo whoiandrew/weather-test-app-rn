@@ -1,0 +1,50 @@
+module.exports = {
+  env: {
+    jest: true,
+  },
+  extends: [
+    '@react-native-community',
+    'plugin:typescript-sort-keys/recommended',
+    'prettier',
+  ],
+  globals: {
+    JSX: true,
+  },
+  ignorePatterns: ['Pods/', 'acceptableUsePolicy.ts'],
+  parser: '@typescript-eslint/parser',
+  plugins: [
+    '@typescript-eslint',
+    'prettier',
+    'prefer-arrow',
+    'sort-destructure-keys',
+    'sort-keys-fix',
+    'typescript-sort-keys',
+    'simple-import-sort',
+  ],
+  root: true,
+  rules: {
+    '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-shadow': 'error',
+    'arrow-body-style': ['error', 'as-needed'],
+    'jest/no-disabled-tests': 'off',
+    'no-shadow': 'off',
+    'no-var': 'error',
+    'prefer-arrow/prefer-arrow-functions': [
+      'error',
+      {
+        classPropertiesAllowed: false,
+        disallowPrototype: true,
+        singleReturnOnly: false,
+      },
+    ],
+    'prefer-const': 'error',
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    'react/jsx-sort-props': 'error',
+    'react/self-closing-comp': 'error',
+    'simple-import-sort/exports': 'error',
+    'simple-import-sort/imports': 'error',
+    'sort-destructure-keys/sort-destructure-keys': 'error',
+    'sort-keys-fix/sort-keys-fix': 'error',
+  },
+};
